@@ -34,7 +34,9 @@ Se hace uso de la librería "Sprites", para poder instalarla siga los siguientes
 </ul>
  
  #capturas de pantalla
- 
+ ![1](https://user-images.githubusercontent.com/89560089/136531893-36ea7a57-e1a2-4d1f-97be-3c594cbd9963.png)
+ ![2](https://user-images.githubusercontent.com/89560089/136532130-eee271c1-4a4a-40c7-9b99-af3e841c4c81.png)
+ ![3](https://user-images.githubusercontent.com/89560089/136532057-616ec0a7-2781-45cf-85b7-063724b7d815.png)
  
  # Caracteristicas
  
