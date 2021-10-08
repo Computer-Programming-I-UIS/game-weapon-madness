@@ -15,7 +15,7 @@ class Bala2 {
   }
   void avanzarder() {
 
-    a+=4;                 //movimiento de las balas
+    a+=6;                 //movimiento de las balas
   }
 }
 
@@ -31,7 +31,7 @@ class Balaizq2 {
     ellipse(a-40, b+10, 5, 5);
   }
   void avanzarizq() {
-    a-=4;
+    a-=6;
     //movimiento de las balas
   }
 }
