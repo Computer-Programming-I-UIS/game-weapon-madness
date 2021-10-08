@@ -1,4 +1,5 @@
 class juego {
+  int x1=1030, y1=25, w=148, h=82;
 
   void inicioJuego() {
 
@@ -7,6 +8,7 @@ class juego {
     //reloj para medir los sprite
     tiempo=(float) reloj.getElapsedTime();
     S4P.updateSprites(tiempo);
+
 
     //Funciones de el primer personaje
     julieta1.mostrar();
@@ -67,5 +69,4 @@ class juego {
       }
     }
   }
-  
 }

@@ -1,11 +1,16 @@
+import ddf.minim.*;
+
 //import librerías
 import sprites.*;
 import sprites.maths.*;
 import sprites.utils.*;
- //-------------------------------------------------------------------------------------     
-            //carga de variables y objetos del juego
+
+
+
+//-------------------------------------------------------------------------------------
+//carga de variables y objetos del juego
 ArrayList<Bala> balas = new ArrayList<Bala>();
-ArrayList<Balaizq> balasizq = new ArrayList<Balaizq>();      
+ArrayList<Balaizq> balasizq = new ArrayList<Balaizq>();
 
 ArrayList<Bala2> balas2 = new ArrayList<Bala2>();
 ArrayList<Balaizq2> balasizq2 = new ArrayList<Balaizq2>();
@@ -18,9 +23,12 @@ Romeo romeo1=new Romeo();
 Sprite movimientoMup, movimientoMizq, movimientoMder, movimientoMgr, movimientoMgl;
 Sprite movimientoJup, movimientoJizq, movimientoJder, movimientoJgr, movimientoJgl;
 
+Minim minim;
+AudioPlayer player;
+
 StopWatch reloj;
 float tiempo;
-      //-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
 controles controles1;
 menuP menu1;
 creditos creditos1;
@@ -31,9 +39,13 @@ int pantalla = 0;
 
 void setup() {
   size(1200, 800);
-  //setup juego  
+  //setup juego
   reloj=new StopWatch();
   escenario=loadImage ("Epruebas.png");
+  
+  //musica de fondo
+  minim=new Minim(this);
+  player= minim.loadFile("xd.mp3");
 
   //carga de sprite del primer personaje
   movimientoMup=new Sprite(this, "spritesheetMo.png", 5, 5, 0);
@@ -65,14 +77,26 @@ void setup() {
   juego1 = new juego();
   //menu = loadImage("menu1.png");
 }
+
 void draw() {
+  player.play();
 
   switch(pantalla) {
   case 0:
     menu1.mostrarMenu();                    //muestra menú principal
     break;
   case 1:  //Start
-juego1.inicioJuego();
+    juego1.inicioJuego();
+
+    fill(#050101);
+    rect(1030, 25, 148, 82);
+    fill(#FCFCFC);
+    textSize(50);
+    text("exit", 1050, 70);
+
+    if ((mousePressed)&&(mouseX > 1030)&&(mouseX< 1030 + 148) &&  (mouseY > 25)&&(mouseY< 25+ 82)) {
+      exit();
+    }
 
     break;
 
@@ -87,6 +111,8 @@ juego1.inicioJuego();
   case 4:  //Salir
     exit();
     break;
+
+
   default:
 
     break;
@@ -114,24 +140,25 @@ void mousePressed() {
     pantalla = creditos1.saberPantallaSig();
     break;
 
+
   default:
 
     break;
   }
 }
- void keyPressed() {
+void keyPressed() {
 
-    //activacion funciones del primer personaje
-    julieta1.teclaPresionada (keyCode);
+  //activacion funciones del primer personaje
+  julieta1.teclaPresionada (keyCode);
 
 
-    //activacion funciones del segundo personaje
-    romeo1.teclaPresionada(keyCode);
-  }
-  void keyReleased() {
-    //desactivacion funciones del primer personaje
-    julieta1.teclaSuelta(keyCode);
+  //activacion funciones del segundo personaje
+  romeo1.teclaPresionada(keyCode);
+}
+void keyReleased() {
+  //desactivacion funciones del primer personaje
+  julieta1.teclaSuelta(keyCode);
 
-    //desacticacion funciones del segundo personaje
-    romeo1.teclaSuelta(keyCode);
-  }
+  //desacticacion funciones del segundo personaje
+  romeo1.teclaSuelta(keyCode);
+}
