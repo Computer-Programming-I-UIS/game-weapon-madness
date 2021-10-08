@@ -54,8 +54,9 @@ Se hace uso de la librería "Sprites", para poder instalarla siga los siguientes
  # Creditos
 
 <ul>
-  <li> Luis Zuno (@ansimuz)</li>
-  <li> jhoan jeréz </li>
+  <li> Luis Zuno (@ansimuz)(diseño de escenarios)</li>
+  <li> jhoan jeréz (diseño de personajes) </li>
+  <li> Efectos de Sonido Sin Copyright (sonidos)(https://www.youtube.com/watch?v=WMxHufUOa2w)</li>
 </ul>
   
 
