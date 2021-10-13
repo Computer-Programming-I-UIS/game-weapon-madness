@@ -38,11 +38,11 @@ int pantalla = 0;
 //PImage menu;
 
 void setup() {
-  size(1200, 800);
+  size(1200, 700);
   //setup juego
   reloj=new StopWatch();
   escenario=loadImage ("Epruebas.png");
-  
+
   //musica de fondo
   minim=new Minim(this);
   player= minim.loadFile("xd.mp3");
@@ -79,14 +79,23 @@ void setup() {
 }
 
 void draw() {
-  player.play();
+
+  //musica
+ // player.play();
 
   switch(pantalla) {
   case 0:
     menu1.mostrarMenu();                    //muestra menú principal
     break;
-  case 1:  //Start
-    juego1.inicioJuego();
+  case 1:  //inicio juego mapa 1
+    if (v1>=1 &&v2>=1) {
+      juego1.inicioJuego();
+    } else if (v1<1 ||v2<1) {
+      pushMatrix() ;
+      translate(600, 400);
+      creditos1.mostrarCreditos();
+      popMatrix();
+    }
 
     fill(#050101);
     rect(1030, 25, 148, 82);
@@ -114,12 +123,10 @@ void draw() {
 
 
   default:
-
     break;
   }
 
-  //controles1.mostrarControles();
-  //image(menu1.menu, 0, 0);
+  
 }
 
 void mousePressed() {
@@ -142,7 +149,6 @@ void mousePressed() {
 
 
   default:
-
     break;
   }
 }
@@ -159,6 +165,6 @@ void keyReleased() {
   //desactivacion funciones del primer personaje
   julieta1.teclaSuelta(keyCode);
 
-  //desacticacion funciones del segundo personaje
+  //desactivacion funciones del segundo personaje
   romeo1.teclaSuelta(keyCode);
 }
