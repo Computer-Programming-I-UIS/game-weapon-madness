@@ -1,6 +1,7 @@
-import ddf.minim.*;
+
 
 //import librerías
+import ddf.minim.*;
 import sprites.*;
 import sprites.maths.*;
 import sprites.utils.*;
@@ -34,8 +35,8 @@ menuP menu1;
 creditos creditos1;
 juego juego1;
 
-int pantalla = 0;
-//PImage menu;
+int pantalla = 0; //PImage menu;
+
 
 void setup() {
   size(1200, 700);
@@ -81,7 +82,7 @@ void setup() {
 void draw() {
 
   //musica
- // player.play();
+  player.play();
 
   switch(pantalla) {
   case 0:
