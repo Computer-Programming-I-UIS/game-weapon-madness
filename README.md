@@ -3,6 +3,9 @@
 
 Weapon madness es un juego multijugador local para 2 jugadores, en el cual se enfrentarán con el objetivo de sacar a su contrincante de la plataforma, para hacerlo, debera aprovechar el retroceso del disparo que tiene su arma, al acabarse las vidas, sel alzará un solo ganador con la victoria.
 
+# Gameplay Lanzamiento 
+https://youtu.be/gvZ22MJGBr0
+
 # Autores
 <ul>
   <li>Cristian Albero Meza Morales</li>
@@ -30,6 +33,8 @@ Se hace uso de la librería "Sprites", para poder instalarla siga los siguientes
   <li>Sketch/Importar Bibliotecas/Añadir Bibiloteca</li>
   <li>Digite "Sprites" en el buscador</li>
   <li>Install</li>
+  <li>repetir el mismo proceso con la libreria "milim"</li>
+  
   
 </ul>
  
@@ -57,6 +62,7 @@ Se hace uso de la librería "Sprites", para poder instalarla siga los siguientes
   <li> Luis Zuno (@ansimuz)(diseño de escenarios)</li>
   <li> jhoan jeréz (diseño de personajes) </li>
   <li> Efectos de Sonido Sin Copyright (sonidos)(https://www.youtube.com/watch?v=WMxHufUOa2w)</li>
+                                               <li> https://www.youtube.com/watch?v=slWc08SN9W8</li>
 </ul>
   
 
