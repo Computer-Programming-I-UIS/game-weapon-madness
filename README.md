@@ -53,6 +53,8 @@ Se hace uso de la librería "Sprites", para poder instalarla siga los siguientes
  <div>jugador 1: teclas de dirección (G y H para disparo).</div>
  <div>jugador 2: teclas (W-A-S-D) ( . y - para disparo).</div>
  
+ Podrás elegir etre distintos mapas tematicos y jugar con tus amigos para saber quien es el que merece quedar en pie sobre las plataformas y conseguir la victoria.
+ 
  # Sinopsis:
  Aunque este jeugo no tiene una historia lineal podemos ver la representacion de algunos personajes con pasado caracteristicos que podremos controlar, cuyos pasados podremos desvelar al jugar en los diversos mapas que el juego tendrá y algunos secretos que desvelaran alguna historia interesante que contar.
  
